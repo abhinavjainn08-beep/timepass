@@ -199,6 +199,45 @@
           "sourceUrl": "https://www.legislation.gov.uk/ukpga/2015/2/section/33"
         }
       }
+    },
+    {
+      "id": "rape_sexual_assault",
+      "label": "Rape / Sexual assault",
+      "keywords": ["raped", "rape", "sexually assaulted", "sexual assault", "molested", "forced himself on me", "forced herself on me", "forced me to have sex", "non consensual sex", "non-consensual sex", "forced sexual contact", "tried to rape", "attempted rape"],
+      "laws": {
+        "IN": {
+          "statute": "Bharatiya Nyaya Sanhita, 2023",
+          "section": "Section 63 (definition of rape); Section 64 (punishment for rape)",
+          "summary": "Sexual intercourse with a person without their free, voluntary consent — including where consent is obtained through fear, fraud, or coercion, or where the person is unable to give consent.",
+          "sourceUrl": "https://www.indiacode.nic.in/bitstream/123456789/20062/1/a2023-45.pdf"
+        },
+        "UK": {
+          "statute": "Sexual Offences Act 2003",
+          "section": "Section 1 (rape); Section 2 (assault by penetration)",
+          "summary": "Intentional penetration of another person's vagina, anus, or mouth without their consent, and without reasonable belief in consent.",
+          "sourceUrl": "https://www.legislation.gov.uk/ukpga/2003/42/section/1"
+        }
+      }
+    },
+    {
+      "id": "sexual_harassment",
+      "label": "Sexual harassment / Outraging modesty",
+      "keywords": ["sexually harassed", "sexual harassment", "inappropriate comments", "made sexual remarks", "unwanted advances", "outraged my modesty", "touched me without consent", "touched me inappropriately", "groped me", "unwelcome sexual", "made lewd comments", "passed lewd remarks", "sexually inappropriate"],
+      "laws": {
+        "IN": {
+          "statute": "Bharatiya Nyaya Sanhita, 2023",
+          "section": "Section 74 (assault or criminal force to a woman with intent to outrage her modesty); Section 75 (sexual harassment)",
+          "summary": "Covers both physical acts — assault or use of criminal force intending to outrage a woman's modesty — and other forms of sexual harassment, such as unwelcome physical contact, demands or requests for sexual favours, or making sexually coloured remarks.",
+          "sourceUrl": "https://www.indiacode.nic.in/bitstream/123456789/20062/1/a2023-45.pdf"
+        },
+        "UK": {
+          "statute": "Sexual Offences Act 2003",
+          "section": "Section 3 (sexual assault)",
+          "summary": "Intentionally touching another person in a sexual way, without their consent and without reasonable belief in consent.",
+          "sourceUrl": "https://www.legislation.gov.uk/ukpga/2003/42/section/3",
+          "note": "Non-physical sexual harassment (e.g. in the workplace) is more often pursued as a civil claim under the Equality Act 2010 rather than prosecuted under the Sexual Offences Act 2003."
+        }
+      }
     }
   ]
 }

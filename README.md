@@ -17,7 +17,7 @@ Built for Project Exhibition 1 (AIML branch group project).
     model (`src/services/classifier.js`) — swap it for an embeddings/LLM
     classifier later without touching anything else; every other module
     only depends on the `{ offenceId, label, confidence }` shape it returns.
-  - The law data lives in `src/data/lawCorpus.json`: 10 offence categories,
+  - The law data lives in `src/data/lawCorpus.json`: 12 offence categories,
     each with real citations for India (Bharatiya Nyaya Sanhita 2023 / IT
     Act 2000) and the UK, sourced from indiacode.nic.in and
     legislation.gov.uk. A few entries carry a `note` field flagging genuine
