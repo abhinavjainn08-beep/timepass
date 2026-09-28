@@ -50,7 +50,7 @@ router.post('/compare', (req, res) => {
 });
 
 // Conversational layer over the above: clarifies, explains, and answers follow-ups.
-router.post('/chat', (req, res) => {
+router.post('/chat', async (req, res) => {
   const { sessionId, message, jurisdiction, selectedOffenceId } = req.body || {};
   if (!sessionId) {
     return res.status(400).json({ error: 'sessionId is required' });
@@ -58,8 +58,13 @@ router.post('/chat', (req, res) => {
   if (!message && !selectedOffenceId) {
     return res.status(400).json({ error: 'message or selectedOffenceId is required' });
   }
-  const reply = handleMessage({ sessionId, message, jurisdiction, selectedOffenceId });
-  res.json(reply);
+  try {
+    const reply = await handleMessage({ sessionId, message, jurisdiction, selectedOffenceId });
+    res.json(reply);
+  } catch (err) {
+    console.error('Unexpected /api/chat error:', err);
+    res.status(500).json({ error: 'Something went wrong handling that message.' });
+  }
 });
 
 module.exports = router;

@@ -1,5 +1,6 @@
 const { classify } = require('./classifier');
-const { lookup } = require('./retrieval');
+const { lookup, listOffences } = require('./retrieval');
+const { generateConversationalReply } = require('./llm');
 
 // In-memory session store, keyed by a sessionId the frontend generates
 // once per browser tab (see frontend/app.js). Good enough for a class
@@ -15,6 +16,8 @@ const REPORTING_GUIDANCE = {
 const DISCLAIMER =
   "This is general legal information, not legal advice — for anything serious, please talk to a qualified lawyer.";
 
+const MAX_HISTORY_TURNS = 8; // 4 user + 4 model messages, roughly
+
 function getSession(sessionId) {
   if (!sessions.has(sessionId)) {
     sessions.set(sessionId, {
@@ -22,10 +25,22 @@ function getSession(sessionId) {
       lastOffenceId: null,
       lastConfidence: null,
       turns: 0,
+      history: [],
     });
   }
   return sessions.get(sessionId);
 }
+
+function remember(session, role, text) {
+  session.history.push({ role, text });
+  if (session.history.length > MAX_HISTORY_TURNS) {
+    session.history = session.history.slice(-MAX_HISTORY_TURNS);
+  }
+}
+
+// The fallback used whenever the LLM is unavailable (no API key, network
+// error, timeout) — keeps the app fully functional with zero config.
+const FALLBACK_CLARIFY = "I couldn't match that to a specific offence yet — can you describe what happened in a bit more detail?";
 
 function buildAnswer(offenceId, jurisdiction, session) {
   const result = lookup(offenceId, jurisdiction);
@@ -62,7 +77,7 @@ function buildAnswer(offenceId, jurisdiction, session) {
   };
 }
 
-function handleMessage({ sessionId, message, jurisdiction, selectedOffenceId }) {
+async function handleMessage({ sessionId, message, jurisdiction, selectedOffenceId }) {
   const session = getSession(sessionId);
   if (jurisdiction) session.jurisdiction = jurisdiction;
   const lower = (message || '').toLowerCase();
@@ -112,11 +127,29 @@ function handleMessage({ sessionId, message, jurisdiction, selectedOffenceId }) 
   const candidates = classify(message);
 
   if (candidates.length === 0) {
-    return {
-      type: 'clarify',
-      message: "I couldn't match that to a specific offence yet — can you describe what happened in a bit more detail?",
-      options: [],
-    };
+    // Doesn't look like an incident description — hand off to the
+    // conversational layer for greetings/small talk/general questions.
+    // It never invents citations (see llm.js); if it's unavailable for
+    // any reason, fall back to the original static prompt so the app
+    // keeps working with zero config.
+    remember(session, 'user', message);
+    try {
+      const offenceLabels = listOffences().map((o) => o.label);
+      const reply = await generateConversationalReply({
+        message,
+        history: session.history.slice(0, -1),
+        offenceLabels,
+      });
+      remember(session, 'model', reply);
+      return { type: 'smalltalk', message: reply };
+    } catch (err) {
+      console.error('Conversational fallback unavailable:', err.message);
+      return {
+        type: 'clarify',
+        message: "I couldn't match that to a specific offence yet — can you describe what happened in a bit more detail?",
+        options: [],
+      };
+    }
   }
 
   const [top, second] = candidates;
