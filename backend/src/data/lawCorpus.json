@@ -1,0 +1,204 @@
+{
+  "jurisdictions": [
+    { "code": "IN", "name": "India" },
+    { "code": "UK", "name": "United Kingdom" }
+  ],
+  "offences": [
+    {
+      "id": "theft",
+      "label": "Theft",
+      "keywords": ["stole", "stolen", "theft", "robbed", "robbery", "snatched", "pickpocket", "took my", "someone took", "shoplifting", "burglary", "burgled"],
+      "laws": {
+        "IN": {
+          "statute": "Bharatiya Nyaya Sanhita, 2023",
+          "section": "Section 303",
+          "summary": "Dishonestly taking movable property out of another person's possession, without their consent, intending to permanently or temporarily deprive them of it.",
+          "sourceUrl": "https://www.indiacode.nic.in/bitstream/123456789/20062/1/a2023-45.pdf"
+        },
+        "UK": {
+          "statute": "Theft Act 1968",
+          "section": "Section 1",
+          "summary": "Dishonestly appropriating property belonging to another, with the intention of permanently depriving them of it.",
+          "sourceUrl": "https://www.legislation.gov.uk/ukpga/1968/60/section/1"
+        }
+      }
+    },
+    {
+      "id": "assault",
+      "label": "Assault / Physical harm",
+      "keywords": ["hit me", "punched", "beat me", "assaulted", "attacked me", "slapped", "physically hurt", "injured me", "beat up", "he hit", "she hit", "they hit"],
+      "laws": {
+        "IN": {
+          "statute": "Bharatiya Nyaya Sanhita, 2023",
+          "section": "Section 115 (hurt); Section 130 (assault or use of criminal force)",
+          "summary": "Voluntarily causing hurt to another person, or using criminal force or assault against them without their consent.",
+          "sourceUrl": "https://www.indiacode.nic.in/bitstream/123456789/20062/1/a2023-45.pdf"
+        },
+        "UK": {
+          "statute": "Offences Against the Person Act 1861 / Criminal Justice Act 1988",
+          "section": "Section 47 OAPA 1861 (actual bodily harm); Section 39 CJA 1988 (common assault/battery)",
+          "summary": "Common assault covers any act causing someone to fear immediate unlawful force, or applying such force; the offence escalates to actual bodily harm when real injury results.",
+          "sourceUrl": "https://www.legislation.gov.uk/ukpga/Vict/24-25/100/section/47"
+        }
+      }
+    },
+    {
+      "id": "criminal_intimidation",
+      "label": "Criminal intimidation / Threats",
+      "keywords": ["threatened to", "threatening me", "said he would hurt", "said they would kill", "threatened my family", "scared me into", "threatened me with"],
+      "laws": {
+        "IN": {
+          "statute": "Bharatiya Nyaya Sanhita, 2023",
+          "section": "Section 351",
+          "summary": "Threatening a person with injury to their person, reputation, or property (or to someone they care about) to cause alarm, or to compel them to act or not act against their will.",
+          "sourceUrl": "https://www.indiacode.nic.in/bitstream/123456789/20062/1/a2023-45.pdf"
+        },
+        "UK": {
+          "statute": "Public Order Act 1986",
+          "section": "Section 4 (fear or provocation of violence)",
+          "summary": "Using threatening, abusive or insulting words or behaviour towards another person with intent to cause them to believe immediate unlawful violence will be used.",
+          "sourceUrl": "https://www.legislation.gov.uk/ukpga/1986/64/section/4",
+          "note": "The UK has no single offence titled \"criminal intimidation\" — depending on the facts, this is usually charged under the Public Order Act 1986 or the Protection from Harassment Act 1997 instead."
+        }
+      }
+    },
+    {
+      "id": "stalking_harassment",
+      "label": "Stalking / Harassment",
+      "keywords": ["following me", "keeps following", "stalking", "won't stop messaging", "harassing me", "keeps calling", "shows up wherever i go", "tracking me", "wont leave me alone"],
+      "laws": {
+        "IN": {
+          "statute": "Bharatiya Nyaya Sanhita, 2023",
+          "section": "Section 78",
+          "summary": "Repeatedly following, contacting, or monitoring a person's use of the internet, email, or other electronic communication despite a clear indication of disinterest.",
+          "sourceUrl": "https://www.indiacode.nic.in/bitstream/123456789/20062/1/a2023-45.pdf"
+        },
+        "UK": {
+          "statute": "Protection from Harassment Act 1997",
+          "section": "Section 2 (harassment); Section 2A (stalking); Section 4A (stalking involving fear of violence or serious alarm)",
+          "summary": "A course of conduct that amounts to harassment, or specifically to stalking, causing the victim alarm or distress.",
+          "sourceUrl": "https://www.legislation.gov.uk/ukpga/1997/40/section/2A"
+        }
+      }
+    },
+    {
+      "id": "extortion_blackmail",
+      "label": "Extortion / Blackmail",
+      "keywords": ["blackmail", "extort", "demanding money", "pay or else", "threatening to leak", "threatening to post", "said he'll release", "said they'll release", "hush money", "ransom", "pay up or"],
+      "laws": {
+        "IN": {
+          "statute": "Bharatiya Nyaya Sanhita, 2023",
+          "section": "Section 308",
+          "summary": "Intentionally putting a person in fear of injury to themselves or another, to dishonestly induce them to hand over property, money, or a valuable security.",
+          "sourceUrl": "https://www.indiacode.nic.in/bitstream/123456789/20062/1/a2023-45.pdf"
+        },
+        "UK": {
+          "statute": "Theft Act 1968",
+          "section": "Section 21",
+          "summary": "Making an unwarranted demand with menaces, with a view to making a gain or causing a loss to another.",
+          "sourceUrl": "https://www.legislation.gov.uk/ukpga/1968/60/section/21"
+        }
+      }
+    },
+    {
+      "id": "cheating_fraud",
+      "label": "Cheating / Fraud",
+      "keywords": ["scammed", "cheated me", "fraud", "fake investment", "fooled me", "tricked me into paying", "fake website", "never delivered", "ponzi", "scam"],
+      "laws": {
+        "IN": {
+          "statute": "Bharatiya Nyaya Sanhita, 2023",
+          "section": "Section 318",
+          "summary": "Deceiving a person to dishonestly induce them to deliver property, or to do or omit to do something they would not otherwise have done, causing them harm.",
+          "sourceUrl": "https://www.indiacode.nic.in/bitstream/123456789/20062/1/a2023-45.pdf"
+        },
+        "UK": {
+          "statute": "Fraud Act 2006",
+          "section": "Section 1 (general offence of fraud), usually charged via Section 2 (fraud by false representation)",
+          "summary": "Dishonestly making a false representation, intending to make a gain or cause a loss to another.",
+          "sourceUrl": "https://www.legislation.gov.uk/ukpga/2006/35/section/1"
+        }
+      }
+    },
+    {
+      "id": "defamation",
+      "label": "Defamation",
+      "keywords": ["spreading lies", "false rumors", "false rumours", "damaging my reputation", "posted lies about me", "slandered", "libel", "defamed", "making up stories about me"],
+      "laws": {
+        "IN": {
+          "statute": "Bharatiya Nyaya Sanhita, 2023",
+          "section": "Section 356",
+          "summary": "Making or publishing an imputation concerning a person, intending to harm (or knowing it is likely to harm) their reputation. Defamation is a criminal offence in India.",
+          "sourceUrl": "https://www.indiacode.nic.in/bitstream/123456789/20062/1/a2023-45.pdf"
+        },
+        "UK": {
+          "statute": "Defamation Act 2013",
+          "section": "Whole Act (civil law)",
+          "summary": "Publishing a statement that causes or is likely to cause serious harm to a person's reputation.",
+          "sourceUrl": "https://www.legislation.gov.uk/ukpga/2013/26/contents",
+          "note": "In England & Wales, defamation is a civil matter (a tort), not a criminal offence — the person defamed sues for damages rather than the state prosecuting. That's a genuine difference from India's approach."
+        }
+      }
+    },
+    {
+      "id": "hacking_unauthorized_access",
+      "label": "Hacking / Unauthorized access",
+      "keywords": ["hacked my", "hacked into", "accessed my account without", "broke into my account", "unauthorized access", "unauthorised access", "my account was compromised", "someone got into my account"],
+      "laws": {
+        "IN": {
+          "statute": "Information Technology Act, 2000",
+          "section": "Section 66 (computer related offences)",
+          "summary": "Dishonestly or fraudulently accessing, damaging, or tampering with a computer resource without authorisation.",
+          "punishment": "Imprisonment up to 3 years and/or fine up to ₹5,00,000.",
+          "sourceUrl": "https://www.indiacode.nic.in/bitstream/123456789/1999/1/A2000-21%20(1).pdf"
+        },
+        "UK": {
+          "statute": "Computer Misuse Act 1990",
+          "section": "Section 1",
+          "summary": "Causing a computer to perform a function with intent to secure unauthorised access to any program or data held on it.",
+          "sourceUrl": "https://www.legislation.gov.uk/ukpga/1990/18/section/1"
+        }
+      }
+    },
+    {
+      "id": "identity_theft",
+      "label": "Identity theft / Impersonation",
+      "keywords": ["impersonating me", "pretending to be me", "used my identity", "fake profile of me", "cloned my account", "created a fake account using my", "pretended to be me"],
+      "laws": {
+        "IN": {
+          "statute": "Information Technology Act, 2000",
+          "section": "Section 66C",
+          "summary": "Fraudulently or dishonestly using another person's electronic signature, password, or unique identification feature.",
+          "punishment": "Imprisonment up to 3 years and fine up to ₹1,00,000.",
+          "sourceUrl": "https://www.indiacode.nic.in/bitstream/123456789/1999/1/A2000-21%20(1).pdf"
+        },
+        "UK": {
+          "statute": "Fraud Act 2006 / Computer Misuse Act 1990",
+          "section": "Section 2 Fraud Act 2006 (fraud by false representation); Section 1 Computer Misuse Act 1990 if a computer was accessed without authorisation",
+          "summary": "There is no standalone \"identity theft\" offence in the UK — using someone's identity to gain money, property, or access is prosecuted as fraud, sometimes combined with unauthorised computer access.",
+          "sourceUrl": "https://www.legislation.gov.uk/ukpga/2006/35/section/2",
+          "note": "Unlike India's dedicated identity-theft provision, the UK folds this into general fraud law."
+        }
+      }
+    },
+    {
+      "id": "privacy_violation",
+      "label": "Privacy violation / Non-consensual images",
+      "keywords": ["shared my private photos", "leaked my photos", "leaked my private photos", "posted my private photos", "posted intimate images", "non consensual", "non-consensual", "private pictures without my consent", "revenge porn", "shared my photos without", "shared my photos without my consent", "photos without my consent", "pictures without my consent", "leaked my private pictures"],
+      "laws": {
+        "IN": {
+          "statute": "Information Technology Act, 2000",
+          "section": "Section 66E",
+          "summary": "Intentionally capturing, publishing, or transmitting the image of a person's private area or private moment without their consent.",
+          "punishment": "Imprisonment up to 3 years and/or fine up to ₹2,00,000.",
+          "sourceUrl": "https://www.indiacode.nic.in/bitstream/123456789/1999/1/A2000-21%20(1).pdf"
+        },
+        "UK": {
+          "statute": "Criminal Justice and Courts Act 2015",
+          "section": "Section 33",
+          "summary": "Disclosing a private sexual photograph or film of someone, without their consent, with the intention of causing them distress (the \"revenge porn\" offence).",
+          "sourceUrl": "https://www.legislation.gov.uk/ukpga/2015/2/section/33"
+        }
+      }
+    }
+  ]
+}

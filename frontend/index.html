@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Themis — know the law that applies to you</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#tool">Skip to the tool</a>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ============ NAV ============ -->
+  <nav class="nav-glass" id="site-nav">
+    <div class="wrap nav-inner">
+      <a href="#top" class="nav-brand">
+        <svg viewBox="0 0 48 48" width="20" height="20" fill="none"><path d="M24 6v36M24 6l-11 6M24 6l11 6M6 16l-2 9a7 7 0 0 0 14 0l-2-9M42 16l-2 9a7 7 0 0 0 14 0l-2-9M13 16h22M11 42h26" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Themis</span>
+      </a>
+      <div class="nav-links">
+        <a href="#how">Process</a>
+        <a href="#tool">Try it</a>
+      </div>
+      <button class="btn primary sm" id="nav-chat-btn">
+        <span>Ask assistant</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero" id="top">
+    <div class="hero-scene" aria-hidden="true">
+      <div class="hero-sky"></div>
+      <svg class="hero-scales" viewBox="0 0 240 260" fill="none">
+        <g class="scales-beam">
+          <circle cx="120" cy="38" r="5" fill="currentColor"/>
+          <line x1="26" y1="38" x2="214" y2="38" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="26" y1="38" x2="14" y2="94" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="26" y1="38" x2="38" y2="94" stroke="currentColor" stroke-width="1.4"/>
+          <path d="M8 94 Q26 118 44 94" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <line x1="214" y1="38" x2="202" y2="94" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="214" y1="38" x2="226" y2="94" stroke="currentColor" stroke-width="1.4"/>
+          <path d="M196 94 Q214 118 232 94" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </g>
+      </svg>
+      <div class="hero-columns"></div>
+      <div class="hero-vignette"></div>
+    </div>
+
+    <div class="wrap hero-inner">
+      <!-- Floating product preview, in the spirit of a native-app screenshot -->
+      <div class="hero-preview" data-reveal>
+        <div class="preview-titlebar">
+          <span class="preview-dot red"></span>
+          <span class="preview-dot amber"></span>
+          <span class="preview-dot green"></span>
+          <div class="preview-tabs">
+            <span>Incident</span>
+            <span class="active">Chat</span>
+          </div>
+        </div>
+        <div class="preview-body">
+          <div class="preview-msg bot">Someone hacked my Instagram and is threatening to leak my photos unless I pay them.</div>
+          <div class="preview-msg user">What law covers this in India?</div>
+          <div class="preview-msg bot"><strong>Extortion / Blackmail</strong> — Bharatiya Nyaya Sanhita, 2023, Section 308. Want the exact wording, or how to file a complaint?</div>
+        </div>
+      </div>
+
+      <div class="hero-center">
+        <div class="hero-mark">
+          <svg viewBox="0 0 48 48" width="26" height="26" fill="none"><path d="M24 6v36M24 6l-11 6M24 6l11 6M6 16l-2 9a7 7 0 0 0 14 0l-2-9M42 16l-2 9a7 7 0 0 0 14 0l-2-9M13 16h22M11 42h26" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h1 class="hero-title">Know the law that<br />actually applies to you.</h1>
+        <p class="hero-sub">
+          Describe an incident in plain language. Get the offence classified, the statute cited to its
+          official source, and a confidence score — explained by a legal-guidance chatbot, not left for
+          you to decode alone.
+        </p>
+        <div class="hero-cta">
+          <a href="#tool" class="btn primary lg">
+            <span>Analyze your situation</span>
+          </a>
+        </div>
+        <p class="hero-caption">Free to use. No login required.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ STATS STRIP ============ -->
+  <div class="stats-strip">
+    <div class="wrap stat-strip">
+      <div class="stat">
+        <strong>10</strong>
+        <span>Offence categories covered</span>
+      </div>
+      <div class="stat">
+        <strong>2</strong>
+        <span>Jurisdictions — India &amp; UK</span>
+      </div>
+      <div class="stat">
+        <strong>100%</strong>
+        <span>Citations linked to official sources</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section class="wrap section-block" id="how">
+    <div class="eyebrow accent">The process</div>
+    <h2 class="section-title" data-reveal>From incident to citation, in three steps</h2>
+
+    <div class="index-row" data-reveal>
+      <span class="index-num">/01</span>
+      <div class="index-copy">
+        <h3>Describe what happened</h3>
+        <p>Plain language, no legal jargon required — "someone hacked my Instagram and is blackmailing me" is enough to start.</p>
+      </div>
+    </div>
+    <hr class="rule" />
+    <div class="index-row" data-reveal>
+      <span class="index-num">/02</span>
+      <div class="index-copy">
+        <h3>Get the offence, cited</h3>
+        <p>The offence is classified, the applicable statute for your jurisdiction is retrieved, linked to its official source, and scored for confidence.</p>
+      </div>
+    </div>
+    <hr class="rule" />
+    <div class="index-row" data-reveal>
+      <span class="index-num">/03</span>
+      <div class="index-copy">
+        <h3>Compare, if it's cross-border</h3>
+        <p>Opt-in only — see how the same offence is treated in another country. Useful for genuinely cross-border cases, never the default view.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TOOL ============ -->
+  <section class="wrap section-block" id="tool">
+    <div class="eyebrow accent">Try it now</div>
+    <h2 class="section-title" data-reveal>Describe the incident</h2>
+
+    <label for="incident-text" class="sr-only">What happened?</label>
+    <textarea
+      id="incident-text"
+      rows="4"
+      placeholder="e.g. Someone hacked my Instagram account and is threatening to post my photos unless I pay them."
+    ></textarea>
+
+    <div class="controls-row">
+      <div class="select-wrap">
+        <label for="jurisdiction-select" class="inline-label">Jurisdiction</label>
+        <select id="jurisdiction-select"></select>
+      </div>
+      <button id="analyze-btn" class="btn primary">
+        <span>Analyze</span>
+        <svg viewBox="0 0 20 20" width="16" height="16" fill="none"><path d="M4 10h11M10 5l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+
+    <div id="result-area" class="result-area hidden">
+      <div class="result-header">
+        <h3 id="result-offence" class="result-offence"></h3>
+        <span id="result-confidence" class="confidence-pill"></span>
+      </div>
+      <div class="confidence-bar-track">
+        <div id="confidence-bar-fill" class="confidence-bar-fill"></div>
+      </div>
+
+      <div class="citation-quote">
+        <p class="statute-line">
+          <strong id="result-statute"></strong> — <span id="result-section"></span>
+        </p>
+        <p id="result-summary" class="summary-text"></p>
+      </div>
+
+      <p id="result-note" class="note-text hidden"></p>
+      <p id="result-punishment" class="punishment-text hidden"></p>
+
+      <div class="result-actions">
+        <a id="verify-source-btn" href="#" target="_blank" rel="noopener" class="btn accent">
+          <svg viewBox="0 0 20 20" width="15" height="15" fill="none"><path d="M10 2l6.5 3v5c0 4.4-2.8 7.9-6.5 9-3.7-1.1-6.5-4.6-6.5-9V5L10 2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M7.5 10l1.8 1.8L13 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Verify official source</span>
+        </a>
+        <button id="compare-toggle-btn" class="btn ghost">
+          <svg viewBox="0 0 20 20" width="15" height="15" fill="none"><path d="M4 4v9a2 2 0 0 0 2 2h10M16 16V7a2 2 0 0 0-2-2H4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Compare across countries</span>
+        </button>
+      </div>
+    </div>
+
+    <div id="candidates-area" class="candidates-area hidden">
+      <p class="muted">Other possible matches</p>
+      <div id="candidates-list" class="chip-row"></div>
+    </div>
+  </section>
+
+  <!-- ============ COMPARE ============ -->
+  <section id="compare-card" class="wrap section-block hidden">
+    <div class="eyebrow accent">Secondary, opt-in view</div>
+    <h2 class="section-title" data-reveal>Cross-country comparison</h2>
+    <div id="compare-table" class="compare-table"></div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>This tool gives general legal information, not legal advice. For anything serious, consult a qualified lawyer.</p>
+    </div>
+  </footer>
+
+  <!-- ============ CHATBOT ============ -->
+  <div id="chat-widget" class="chat-widget">
+    <div id="chat-teaser" class="chat-teaser">
+      👋 Ask me anything about your situation
+      <button id="chat-teaser-close" aria-label="Dismiss">&times;</button>
+    </div>
+
+    <div id="chat-panel" class="chat-panel hidden">
+      <div class="chat-panel-header">
+        <div class="chat-header-title">
+          <span class="chat-avatar">⚖️</span>
+          <div>
+            <strong>Legal guidance</strong>
+            <small>Usually replies instantly</small>
+          </div>
+        </div>
+        <button id="chat-close-btn" aria-label="Close chat">&times;</button>
+      </div>
+      <div id="chat-messages" class="chat-messages"></div>
+      <div id="chat-quick-replies" class="chat-quick-replies"></div>
+      <form id="chat-form" class="chat-form">
+        <input id="chat-input" type="text" placeholder="Type a message…" autocomplete="off" />
+        <button type="submit" class="chat-send-btn" aria-label="Send message">
+          <svg viewBox="0 0 20 20" width="16" height="16" fill="none"><path d="M3 10l14-7-4.5 14-3-5.5L3 10z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg>
+        </button>
+      </form>
+      <p class="chat-disclaimer">Informational only, not legal advice.</p>
+    </div>
+
+    <button id="chat-toggle-btn" class="chat-toggle-btn" aria-label="Open legal guidance chat">
+      <svg viewBox="0 0 24 24" width="24" height="24" fill="none"><path d="M4 4h16v12H8l-4 4V4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
